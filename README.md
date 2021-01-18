@@ -1,3 +1,5 @@
+# No Laughing Matter
+
 ## Inspiration
 
 In the midst of COVID-19, party game platforms such as Jackbox allows people to have fun with their family and friends while being remotely apart. That said, many of those game platforms fail to mimic an interactive party environment, and it is sometimes hard to feel the existence of other players over the internet. Thus, we see a need to create a real time party game where players can easily interact with each other.
