@@ -12,7 +12,7 @@ A Realtime Web Video Chat Game for rating player jokes, powered by facial recogn
 - Node.js and Express for backend server
 - Socket.IO for managing video chat rooms
 - WebRTC for realtime video streaming
-- Tensorflow.js library for facial recognition and analysis
+- Tensorflow.js library for facial recognition and analysis (to determine laughter/smiling)
 
 Originally Demoed at Hack the North:
 https://devpost.com/software/no-laughing-matter
