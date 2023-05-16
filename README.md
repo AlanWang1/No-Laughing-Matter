@@ -8,10 +8,10 @@ A Realtime Web Video Chat Game for rating player jokes, powered by facial recogn
 
 ## Tech Stack
 
-- Node.js and Express for Backend Server
-- Socket.IO for managing Vidoe Chat Rooms
+- Node.js and Express for backend server
+- Socket.IO for managing video chat rooms
 - WebRTC for realtime video streaming
 
-Original Demoed at Hack the North:
+Originally Demoed at Hack the North:
 https://devpost.com/software/no-laughing-matter
 
