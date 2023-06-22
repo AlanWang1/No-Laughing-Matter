@@ -8,33 +8,32 @@ for (var i = 0; i < 150; i++) {
   scoreRecords.push(80);
 }
 
-let check_score = false
-let turnlist = ""
+let check_score = false;
+let turnlist = "";
 socket.on("update_score", (data) => {
   //console.log(Math.round(data.score));
 
-
   console.log("current width" + curWidth);
 
-    if (check_score == true) {
-      console.log('curwidth being analysed')
-      if (curWidth < 0) {
-        scores = [20, 20, 20, 20];
-        prevScore = 90;
-        prevWidth = 80;
-        scoreRecords = [];
-        console.log('curwidth less than zero')
-        socket.emit('round-over', {cur_turn: turnlist})
-        for (var i = 0; i < 150; i++) {
-          scoreRecords.push(80);
-        }
+  if (check_score == true) {
+    console.log("curwidth being analysed");
+    if (curWidth < 0) {
+      scores = [20, 20, 20, 20];
+      prevScore = 90;
+      prevWidth = 80;
+      scoreRecords = [];
+      console.log("curwidth less than zero");
+      socket.emit("round-over", { cur_turn: turnlist });
+      for (var i = 0; i < 150; i++) {
+        scoreRecords.push(80);
       }
     }
+  }
   socket.on("start-judging", (data) => {
-    console.log('judging starting')
-    check_score = true
-    turnlist = data.turn
-    });
+    console.log("judging starting");
+    check_score = true;
+    turnlist = data.turn;
+  });
   scores.shift();
   scores.push(Math.round(data.score));
   var avg = 0;
@@ -82,7 +81,6 @@ socket.on("update_score", (data) => {
     prevScore = curScore;
     progressBar.style = `width: ${Math.round(curWidth)}%`;
     prevWidth = curWidth;
-
   }
   //console.log(`width: ${progressBar.style.width}`)
   //console.log(`max: ${progressBar.getAttribute('aria-valuemax')}`)
